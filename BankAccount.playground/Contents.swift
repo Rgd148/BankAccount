@@ -1,28 +1,33 @@
-import UIKit
+import Foundation
 
-//
-//
-//struct Transaction {
-//    var customerID : Int
-//    var tranID : Int
-//    var trandate: Data
-//    var tranamount :Int
-//    var tranbankReceipient : String
-//    var typeOfTran: String
-//}
+enum Gender {
+    case Female
+    case Male
+}
+
+enum TypeOfTransction {
+    case withdraw
+    case deposit
+}
+struct Transaction {
+    var tranID : Int
+    var tranDate: Date
+    var tranAmount :Int
+//    var tranBankReceipient : String
+    var typeOfTran: TypeOfTransction
+}
 
 struct CustomerInformation {
    var customName : String
     var customID : Int
-    enum Gender {
-        case Female
-        case Male
-    }
-//    var customerTransaction: [Transaction]
+    var gender : Gender
+     var customerTransaction: [Transaction] = []
     var balance = 0
     mutating func withdraw (moneyDraw : Int) {
         if ( moneyDraw <= balance ){
             self.balance -= moneyDraw
+            let makeTransctionReport = Transaction(tranID: Int.random(in: 300...100000), tranDate: Date(), tranAmount: moneyDraw, typeOfTran: .withdraw)
+            self.customerTransaction.append(makeTransctionReport)
             print ("You successfully withdraw : \(moneyDraw)")
             }
         else if (moneyDraw > balance) {
@@ -30,6 +35,8 @@ struct CustomerInformation {
     
     mutating func deposit (diMoney : Int, newBalanc: Int ) {
        let newBalanc = diMoney + balance
+        let makeTransctionReport = Transaction(tranID: Int.random(in: 300...100000), tranDate: Date(), tranAmount: diMoney, typeOfTran: .deposit)
+        self.customerTransaction.append(makeTransctionReport)
             print ("You successfully deposit amount of : \(newBalanc)")
             
     }
@@ -46,15 +53,16 @@ class SaudiBanks : BankLicense {
     
     var bankName : String
     var numOfClinet : Int?
-//    var bankBalance = 0
+    var bankBalance = 0
     
-//    var transactions: [Transaction]
+
     var customers : [CustomerInformation] = []
+//    var trans : [Transaction] = []
     
     init (bankName : String, numOfClinet : Int) {
         self.bankName  = bankName
         self.numOfClinet = numOfClinet
-//        self.balance = balance
+
     }
     
     func LicenseTerms (){
@@ -62,17 +70,19 @@ class SaudiBanks : BankLicense {
 }
 
 var alrajhi = SaudiBanks(bankName: "Al Rajhi", numOfClinet: 0)
-alrajhi.customers.append(CustomerInformation(customName: "Raghad", customID: 1, balance: 10000))
-alrajhi.customers[0].balance
-alrajhi.customers[0].withdraw(moneyDraw: 5000)
-alrajhi.customers[0].balance
 
+alrajhi.customers.append(CustomerInformation(customName: "Raghad", customID: 1, gender: .Female, balance: 10000))
+//alrajhi.customers[0].balance
+alrajhi.customers[0].withdraw(moneyDraw: 3000)
+//alrajhi.customers[0].balance
 
-extension SaudiBanks {
+alrajhi.customers[0].customerTransaction
+                                 
+                                 
+                                 
+                                 
 
-}
-
-
+                     
 
 class AlrajhiBank : SaudiBanks {
     var branches: Dictionary <String,Int> = ["midena": 10,"meca": 15,"ryidah": 22, "jeddah":25,"Abha":16]
