@@ -37,12 +37,18 @@ struct CustomerInformation {
         else if (moneyDraw > balance) {
             print ("We are sorry Your balance is not enough, As your balance is \(balance)") }  }
     
-    mutating func deposit (diMoney : Int, newBalanc: Int ) {
+    mutating func deposit (diMoney : Int ) {
         let newBalanc = diMoney + balance
         let makeTransctionReport = Transaction(tranID: Int.random(in: 300...100000), tranDate: Date(), tranAmount: diMoney, typeOfTran: .deposit)
         self.customerTransaction.append(makeTransctionReport)
         print ("You successfully deposit amount of : \(newBalanc)")
         
+    }
+    
+    func showTransaction(){
+        for transaction in self.customerTransaction {
+            print("TransID: \(transaction.tranID), Type: \(transaction.typeOfTran), \(transaction.tranAmount)")
+        }
     }
     
 }
@@ -74,7 +80,12 @@ class SaudiBanks : BankLicense {
         self.customers.append(customer)
         self.numOfCustom += 1
     }
-    
+    func showCustomersByGender(gender: Gender) {
+        let filterArray = self.customers.filter({$0.gender == gender})
+        for customer in filterArray {
+            print(customer.customName, customer.gender)
+        }
+    }
     
     func LicenseTerms (){
         print (" 1.for the bank to take the form of a local joint stock company \n 2.The founders have the following:\n -Experience and knowledge in the financial sector \n -Appropriate experience and knowledge related to technology \n -Eligibility,Ability and financial solvency to support the establishment of a digital bank \n 3.The applicants should have a team of individuals with expertise in their fields, in order to discuss the relevant aspects of the submitted application.") }
@@ -89,13 +100,17 @@ alrajhi.createNewAccount(customer: CustomerInformation(customName: "Raghad", cus
 alrajhi.numOfCustom
 alrajhi.customers[0].balance
 alrajhi.customers[0].withdraw(moneyDraw: 3000)
+alrajhi.customers[0].withdraw(moneyDraw: 500)
+alrajhi.customers[0].deposit(diMoney: 10000)
 alrajhi.customers[0].balance
 alrajhi.customers[0].customerTransaction
+alrajhi.customers[0].showTransaction()
+alrajhi.showCustomersByGender(gender: .Male)
 alrajhi.branches["Medina"] = 22
 alrajhi.branches["meca"] = 12
 alrajhi.bankBalance = 200000000
 //alrajhi.LicenseTerms()
-
+alrajhi.numOfCustom
 
 
 
