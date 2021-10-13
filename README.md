@@ -6,11 +6,11 @@ Bank Operations
 
 ## Usage 
   
-- Add Customer
-- withDraw
-- Deposit
-- Print all transections
-- Print all customer by Gender
+- Add Customer -> func createNewAccount(customer: CustomerInformation) 
+- withDraw -> func withdraw (moneyDraw : Int)
+- Deposit  -> func deposit (diMoney : Int )
+- Print all transections -> func showTransaction()
+- Print all customer by Gender -> showCustomersByGender(gender: Gender) 
 
 ## Favorite functions work
 - func deposit (diMoney : Int )
@@ -19,4 +19,4 @@ Bank Operations
 - Import Foundation
 
 ## UpComing Features
-- Transformation 
+- Transition 
