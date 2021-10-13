@@ -94,46 +94,28 @@ class SaudiBanks : BankLicense {
 }
 
 
-
-var alrajhi = SaudiBanks(bankName: "Al Rajhi", bankBalancce: 1000)
-alrajhi.createNewAccount(customer: CustomerInformation(customName: "Raghad", customID: 1, gender: .Female, balance: 10000))
-alrajhi.numOfCustom
-alrajhi.customers[0].balance
-alrajhi.customers[0].withdraw(moneyDraw: 3000)
-alrajhi.customers[0].withdraw(moneyDraw: 500)
-alrajhi.customers[0].deposit(diMoney: 10000)
-alrajhi.customers[0].balance
-alrajhi.customers[0].customerTransaction
-alrajhi.customers[0].showTransaction()
-alrajhi.showCustomersByGender(gender: .Male)
-alrajhi.branches["Medina"] = 22
-alrajhi.branches["meca"] = 12
-alrajhi.bankBalance = 200000000
+//
+//var alrajhi = SaudiBanks(bankName: "Al Rajhi", bankBalancce: 1000)
+//alrajhi.createNewAccount(customer: CustomerInformation(customName: "Raghad", customID: 1, gender: .Female, balance: 10000))
+//alrajhi.numOfCustom
+//alrajhi.customers[0].balance
+//alrajhi.customers[0].withdraw(moneyDraw: 3000)
+//alrajhi.customers[0].withdraw(moneyDraw: 500)
+//alrajhi.customers[0].deposit(diMoney: 10000)
+//alrajhi.customers[0].balance
+//alrajhi.customers[0].customerTransaction
+//alrajhi.customers[0].showTransaction()
+//alrajhi.showCustomersByGender(gender: .Male)
+//alrajhi.branches["Medina"] = 22
+//alrajhi.branches["meca"] = 12
+//alrajhi.bankBalance = 200000000
 //alrajhi.LicenseTerms()
-alrajhi.numOfCustom
-
-
-
-
-
-
-
-
-
-
-//class AlrajhiBank : SaudiBanks {
-//    var branches: Dictionary <String,Int> = ["midena": 10,"meca": 15,"ryidah": 22, "jeddah":25,"Abha":16]
-//    }
+//alrajhi.numOfCustom
 //
-//class AlahliBank : SaudiBanks {
-//    var branches: Dictionary <String,Int> = ["midena": 10,"meca": 11,"ryidah": 24, "jeddah":25,"Abha":14]
-//    }
-//class AlbladBank : SaudiBanks {
-//    var branches: Dictionary <String,Int> = ["midena": 20,"meca": 12,"ryidah": 8, "jeddah":11,"Abha":20]
-//    }
-//class Alarbi : SaudiBanks {
-//    var branches: Dictionary <String,Int> = ["midena": 13,"meca": 12,"ryidah": 11, "jeddah":17,"Abha":16]
-//    }
 //
+//
+//var alahli = SaudiBanks(bankName: "alahli", bankBalancce: 1000000)
+//alahli.createNewAccount(customer: CustomerInformation(customName: "Aziz", customID: 1, gender: .Male))
+//alahli.customers[0]
 
 
