@@ -79,6 +79,7 @@ class SaudiBanks : BankLicense {
     func createNewAccount(customer: CustomerInformation) {
         self.customers.append(customer)
         self.numOfCustom += 1
+        print("number of customer \(numOfCustom)")
     }
     func showCustomersByGender(gender: Gender) {
         let filterArray = self.customers.filter({$0.gender == gender})
@@ -95,27 +96,25 @@ class SaudiBanks : BankLicense {
 
 
 //
-//var alrajhi = SaudiBanks(bankName: "Al Rajhi", bankBalancce: 1000)
-//alrajhi.createNewAccount(customer: CustomerInformation(customName: "Raghad", customID: 1, gender: .Female, balance: 10000))
-//alrajhi.numOfCustom
-//alrajhi.customers[0].balance
-//alrajhi.customers[0].withdraw(moneyDraw: 3000)
-//alrajhi.customers[0].withdraw(moneyDraw: 500)
-//alrajhi.customers[0].deposit(diMoney: 10000)
-//alrajhi.customers[0].balance
-//alrajhi.customers[0].customerTransaction
-//alrajhi.customers[0].showTransaction()
-//alrajhi.showCustomersByGender(gender: .Male)
-//alrajhi.branches["Medina"] = 22
-//alrajhi.branches["meca"] = 12
-//alrajhi.bankBalance = 200000000
-//alrajhi.LicenseTerms()
-//alrajhi.numOfCustom
-//
-//
-//
+var alrajhi = SaudiBanks(bankName: "Al Rajhi", bankBalancce: 1000)
+alrajhi.createNewAccount(customer: CustomerInformation(customName: "Raghad", customID: 1, gender: .Female, balance: 10000))
+alrajhi.numOfCustom
+alrajhi.customers[0].balance
+alrajhi.customers[0].withdraw(moneyDraw: 3000)
+alrajhi.customers[0].withdraw(moneyDraw: 500)
+alrajhi.customers[0].deposit(diMoney: 10000)
+alrajhi.customers[0].balance
+alrajhi.customers[0].customerTransaction
+alrajhi.customers[0].showTransaction()
+alrajhi.showCustomersByGender(gender: .Male)
+alrajhi.branches["Medina"] = 22
+alrajhi.branches["meca"] = 12
+alrajhi.bankBalance = 200000000
+alrajhi.LicenseTerms()
+
 //var alahli = SaudiBanks(bankName: "alahli", bankBalancce: 1000000)
-//alahli.createNewAccount(customer: CustomerInformation(customName: "Aziz", customID: 1, gender: .Male))
-//alahli.customers[0]
+alrajhi.createNewAccount(customer: CustomerInformation(customName: "Aziz", customID: 1, gender: .Male))
+alrajhi.customers[0]
+alrajhi.numOfCustom
 
 

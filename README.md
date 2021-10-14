@@ -1,22 +1,33 @@
 # BankAccount
-Bank Operations
+My program build for Banks Operations
 
 ## Overview
 ### Banks Program is a program can customer deposit , withdraw and show the all transaction he made
 
+## Features
+You can adding a new Customer, withDraw ,Deposit ,Print all transections ,Print all customer by Gender
+
 ## Usage 
   
-- Add Customer -> func createNewAccount(customer: CustomerInformation) 
-- withDraw -> func withdraw (moneyDraw : Int)
-- Deposit  -> func deposit (diMoney : Int )
-- Print all transections -> func showTransaction()
-- Print all customer by Gender -> showCustomersByGender(gender: Gender) 
+  I used in my program
+ - protocol for licence terms 
+ -  class saudiBanks
+ - 2 struct one for the customer and one for transection
+ - 2 enum one for the gender and one for transection type (withDraw or deposit)
+ - 4 functions withDraw (moneyDraw : Int) , deposit (diMoney : Int ), showTransaction(),
+ showCustomersByGender(gender: Gender)
+ 
+ 
 
 ## Favorite functions work
 - func deposit (diMoney : Int )
 
-## Technology
-- Import Foundation
-
 ## UpComing Features
-- Transition 
+- Transfer 
+
+
+
+
+
+
+
