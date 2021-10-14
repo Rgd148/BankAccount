@@ -41,8 +41,6 @@ You can adding a new Customer, withDraw ,Deposit ,Print all transections ,Print 
 
 
 
-IF YOU WANT TO SEE MY CODE GO TO MY GITHUP 
-Rgd148
 
 
 
