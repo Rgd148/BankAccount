@@ -14,8 +14,11 @@ You can adding a new Customer, withDraw ,Deposit ,Print all transections ,Print 
  -  class saudiBanks
  - 2 struct one for the customer and one for transection
  - 2 enum one for the gender and one for transection type (withDraw or deposit)
- - 4 functions withDraw (moneyDraw : Int) , deposit (diMoney : Int ), showTransaction(),
- showCustomersByGender(gender: Gender)
+ - 4 functions:
+ 1- withDraw --> func withDraw (moneyDraw : Int) 
+ 2- Deposit --> func deposit (diMoney : Int )
+ 3- Transection --> showTransaction()
+ 4- Customer --> showCustomersByGender(gender: Gender)
  
  
 
@@ -25,6 +28,21 @@ You can adding a new Customer, withDraw ,Deposit ,Print all transections ,Print 
 ## UpComing Features
 - Transfer 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+IF YOU WANT TO SEE MY CODE GO TO MY GITHUP 
+Rgd148
 
 
 
